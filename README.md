@@ -1,7 +1,3 @@
-
-link
-
-
 # moviequiz
 My first project using php. This is a simple questionnaire I created.
   
@@ -12,19 +8,18 @@ My first project using php. This is a simple questionnaire I created.
         <li><a id="blue">Styling used</a>
         <ul>
             <li><a>Bulma</a></li>
-            <li><a>Inline styling</a></li>
+            <li>Inline styling</li>
         </ul>
         </li>    
         <li><a id="green">Option styling</a>
             <ul>
-                <li><a>Dropdown Select</a></li>
+                <li>Dropdown Select</li>
             </ul>
         </li>
-        <li><a id="orange"></a>
+        <li><a id="orange">Media Used</a>
             <ul>
-                <li><a>Facebook</a></li>
-                <li><a>Twitter</a></li>
-                <li><a>Whatsapp</a></li>
+                <li><a>GIFS from media.giphy.com</a></li>
+                <li><a>Images sourced from Google Images & Pexels</a></li>
             </ul>
         </li>        
     </ul>
