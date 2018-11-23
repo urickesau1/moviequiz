@@ -34,8 +34,9 @@
 
         p {
             color: white;
-            font-family: 'Roboto Slab', serif;
+            font-family: serif;
             font-size: 1.5rem;
+            
 
         }
 
@@ -281,7 +282,7 @@
                 }
                 
                 //This is to display the user's score after clicking submit. Using the $username variable, I'm able to use the name the user entered on the landing/index page.
-                echo "<h1>$username You got $correct correct!<a>
+                echo "<h1>$username You got $correct correct!</h1>
                 <a href='index.php'>Try again</a></p>";
                 $grade = ($correct / 20) * 100;
 

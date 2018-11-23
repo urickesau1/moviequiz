@@ -9,6 +9,7 @@
     <style>
         body {
             background: black;
+
             color: red;
         }    
 
