@@ -12,8 +12,13 @@
             color: white;
         }    
 
+        p {
+            font-size: xx-large;
+        }
+
         h2 {
             text-align: center;
+            font-size: xx-large;
         }
 
         .text {
@@ -61,6 +66,14 @@
         a:hover {
             color: red;
         }
+        img:hover{
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 0px 30px 0px #ff0505;
+            -moz-box-shadow:    0px 0px 30px 0px #ff0505;
+            box-shadow:         0px 0px 30px 0px #ff0505;
+        }
     
     </style>
 </head>
@@ -85,6 +98,7 @@
                 you like movies? Have a good eye for detail? Lets find out just how much you know about movie trivia.
                 <p>Click Submit and then Begin quiz.</p>
                 <img src='img/saw1.jpg'>
+                <br>
                 <!--A simple effect which might entice the user to begin the quiz-->
                 <div class="text">
                     <span>ARE</span>

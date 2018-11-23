@@ -520,8 +520,9 @@
                 on his six-pack 😋
                 <img src='img/llcoolj.jfif'>
                 </h2><br>
-            </div>",
-            "
+            </div><br><br>",
+            "<br>
+            <br>
             <div>
                 <h2>Who is the most on-screen portrayed actor of all time ?
                 <select name='ans14'>
