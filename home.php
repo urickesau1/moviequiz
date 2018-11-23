@@ -161,6 +161,7 @@
         </h2>
         
         <?php
+            //Here I declared the variables for each answer to be linked to the scoring method as stated below.
             if (!empty($_POST)) {
                 $ans1 = $_POST['ans1'];
                 $ans2 = $_POST['ans2'];
@@ -183,9 +184,11 @@
                 $ans19 = $_POST['ans19'];
                 $ans20 = $_POST['ans20'];
 
+                //This is the variable I used in the index/landing page for the quiz. User enters their name and the content is called using this variable.
                 $username = $_SESSION['username'];
 
-                //This is the formula I used for calculating the user's final score for the quiz//
+                //This is the formula I used for calculating the user's final score for the quiz
+                //If the user selects the correct answer  for each question as stated below, their score increases by 1 point per correct answer.
                 $correct = 0;
                 if ($ans1 == 'Mowgli') {
                     $correct++;
@@ -220,6 +223,7 @@
                 if ($ans11 == 'Beautiful Chocolate Man') {
                     $correct++;
                 }
+                //I added hints for certain questions users answered incorrectly (that might be difficult for users) to encourage them to try again.
                 else {
                     echo "<p>You need to watch White Chicks again! <p>'Making my way downtwon, <p>walking fast and i'm home-bound 🎧 🎼 🎹 </p>";
                 }
@@ -275,7 +279,8 @@
                 if ($ans20 == 'Falls down the drain') {
                     $correct++;
                 }
-
+                
+                //This is to display the user's score after clicking submit. Using the $username variable, I'm able to use the name the user entered on the landing/index page.
                 echo "<p>$username You got $correct correct!<br>
                 <a href='index.php'>Try again</a></p>";
                 $grade = ($correct / 20) * 100;
@@ -617,6 +622,7 @@
             </div>
             <input type="submit">;');
 
+            //This is the function I used to loop through the questions and options within the variable and display them on the webpage
             for ($x=1;$x<=21;$x++) { 
                 echo $questions[$x];
             }
