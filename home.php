@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Urick's Quiz</title>
+    <title>Movie Quiz</title>
     <link rel="stylesheet" href="css/bulma.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Spicy+Rice" rel="stylesheet"> 
@@ -21,11 +21,7 @@
             height: auto;
             max-width: 100%;
             border-radius: 20%;
-        }    
-
-        h3 {
-            color: gold;
-        }
+        }   
 
         h1 {
             text-decoration: underline;
@@ -102,13 +98,7 @@
             animation: animate 8s linear infinite;
         }
 
-        h3 {
-            text-align: left;
-            padding: 2%;
-            font-family: 'Roboto Slab', serif;
-            font-size: xx-large;
-            text-decoration: underline;
-        }
+
         .text {
             margin: 250px 300px;
             text-align: center;
@@ -203,7 +193,7 @@
                 if ($ans2 == 'Jordan Belfort') {
                     $correct++;
                 }
-                if ($ans3 == 15) {
+                if ($ans3 == 'A woman with a big appetite') {
                     $correct++;
                 }
                 if ($ans4 == 'Bananas') {
@@ -231,7 +221,7 @@
                     $correct++;
                 }
                 else {
-                    echo "<p>You need to watch White Chicks again! <br>'Making my way downtwon, walking fast and i'm home-bound 🎧 🎼 🎹 </p>";
+                    echo "<p>You need to watch White Chicks again! <p>'Making my way downtwon, <p>walking fast and i'm home-bound 🎧 🎼 🎹 </p>";
                 }
 
                 if ($ans12 == 'King Ding-a-ling') {
@@ -294,10 +284,15 @@
                 //If a user gets a particular score, they will see the following message
                 if ($correct == 0) {
                     echo "<p>You are dumb!</p>";
+                    
                 }
-                elseif ($correct <= 10) {
+                elseif ($correct <= 9) {
                     echo "<p>Good attempt, but it's obvious you were half asleep while watching 😆</p>";
                 }
+                elseif ($correct = 10) {
+                    echo "<p>My grandma scored 12...I'm just saying...</p>
+                    <img src='https://media.giphy.com/media/ar4x1w44umngk/giphy.gif'>";
+                }    
                 elseif ($correct = 11) {
                     echo "<p>My grandma scored 12...I'm just saying...</p>";
                 }
@@ -311,22 +306,27 @@
                     echo "<p>14...My ouma scored 15...I'm just saying...</p>" ;
                 }
                 elseif ($correct == 15) {
-                    echo "<p><p>15...My ouma scored 16...I'm just saying...</p></p>";
+                    echo "<p>15...My ouma scored 16...I'm just saying...</p>";
                 }
                 elseif ($correct == 16) {
-                    echo "<p>16...This must be your age, right?</p>";
+                    echo "<p>16...This must be your age, right?
+                    <img src='https://media.giphy.com/media/l0MYCn3DDRBBqk6nS/giphy.gif'></p>";
                 }
                 elseif ($correct == 17) {
-                    echo "<p>17...yaaaay you got more than Evan</p>";
+                    echo "<p>17...yaaaay you got more than Evan</p>
+                    <img src='https://media.giphy.com/media/l0MYCn3DDRBBqk6nS/giphy.gif'>";
                 }
                 elseif ($correct == 18) {
-                    echo "<p>18...you got lucky...</p>";
+                    echo "<p>18...you got lucky...</p>
+                    <img src='https://media.giphy.com/media/l0MYCn3DDRBBqk6nS/giphy.gif'>";
                 }
                 elseif ($correct == 19) {
-                    echo "<p>Nogal 19, Amper Milo mybru!!!</p>";
+                    echo "<p>Nogal 19, Amper Milo mybru!!!</p>
+                    <img src='https://media.giphy.com/media/l0MYCn3DDRBBqk6nS/giphy.gif'>";
                 }
                 elseif ($correct == 20) {
-                    echo "<p>You did it! Af met die boom mybru!</p>";
+                    echo "<p>You did it! Af met die boom mybru!
+                    <img src='https://media.giphy.com/media/l0MYCn3DDRBBqk6nS/giphy.gif'></p>";
                 }
             } 
 
@@ -340,220 +340,273 @@
 
             //This is where the questions variable starts, it contains the questions for the quiz.
             //I used the "select" tag to create a drop-down effect for the possible answers
-            $questions = array("","<h3>Question 1:</h3>
-            <h2>In The Jungle Book movie franchise, what is the name of the boy in the jungle?🦍<br>
-            <img src='img/jungle.jfif'>
-            <select name=ans1>
-                <option value='blank'></option>
-                <option value='Shere Kahn'>Shere Kahn</option>
-                <option value='Shaka Kahn'>Shaka Kahn</option>
-                <option value='Mowgli'>Mowgli</option>
-                <option value='Tarzan'>Tarzan</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 2:</h3>
-            <h2>In the 2013 movie 'The Wolf of Wall Street' Leonardo Di Caprio portrays which famous American stock broker?🥂 🍷 🥃 🍸 
-            <img src='https://i.gifer.com/vcw.gif'>
-            <select name=ans2>
-                <option value='blank'></option>
-                <option value='Jordan Belfort'>Jordan Belfort</option>
-                <option value='Jordan Belmont'>Jordan Belmont</option>
-                <option value='Jordan Smith'>Jordan Smith</option>
-                <option value='Jordan Mitchell'>Jordan Mitchell</option>
-            </select></h2><br>",
-            "<h3>Question 3:</h3>
-            <h2>What is 12 + 3?
-            <input type='number' name='ans3'>
-            </h2><br>",
-            "<h3>Question 4:</h3>
-            <h2>In the Despicable Me movie franchise, the yellow minions can't resist which fruit?🍎 🍐 🍊 🍋 🍌
-            <img src='img/minions.jfif'>
-            <select name=ans4>
-                <option value='blank'></option>
-                <option value='Apples'>Apples</option>
-                <option value='Strawberries'>Strawberries</option>
-                <option value='Bananas'>Bananas</option>
-                <option value='Oranges'>Oranges</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 5:</h3>
-            <h2>In the 'Scary Movie' comedy franchise, what is the name of the killer in the mask👻?
-            <img src='https://i.gifer.com/6QzE.gif'>
-            <select name='ans5'>
-                <option value='blank'></option>
-                <option value='Ghostface'>Ghostface</option>
-                <option value='Scream'>Scream</option>
-                <option value='Bobby-Ray'>Bobby-Ray</option>
-                <option value='Slash'>Slash</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 6:</h3>
-            <h2>Who does Samuel L Jackson play in the 2000 film 'Shaft'?
-            <img src='img/shaft.jfif'>
-            <select name='ans6'>
-                <option value='blank'></option>
-                <option value='Eddy Shaft'>Eddy Shaft</option>
-                <option value='John Shaft'>John Shaft</option>
-                <option value='Mike Shaft'>Mike Shaft</option>
-                <option value='Wade Shaft'>Wade Shaft</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 7:</h3>
-            <h2>Who directed the 2007 film 'Transformers'?
-            <img src='img/transformers.jfif'>
-            <select name='ans7'>
-                <option value='blank'></option>
-                <option value='Steven Richards'>Steven Richards</option>
-                <option value='Steven Spielberg'>Steven Spielberg</option>
-                <option value='Martin Scorsese'>Martin Scorsese</option>
-                <option value='Michael Bay'>Michael Bay</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 8:</h3>
-            <h2>In the 1998 film 'Armaggedon', which natural disaster do humans face?
-            <img src='img/armageddon.jfif'>
-            <select name='ans8'>
-                <option value='blank'></option>
-                <option value='Asteroid Impact'>Asteroid Impact</option>
-                <option value='Massive Earthquake'>Massive Earthquake</option>
-                <option value='Massive Tsunami'>Massive Tsunami</option>
-                <option value='Massive Volcanic Erruption'>Massive Volcanic Erruption</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 9:</h3>
-            <h2>Which movie does the term 'Say hello to my little friend' come from?
-            <img src='https://media.giphy.com/media/mmSNtSemWJJGE/giphy.gif'>
-            <select name='ans9'>
-                <option value='blank'></option>
-                <option value='Rambo'>Rambo</option>
-                <option value='The Terminator'>The Terminator</option>
-                <option value='Scarface'>Scarface</option>
-                <option value='Bad Boys 2'>Bad Boys 2</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 10:</h3>
-            <h2>In the greek mythology movie 'Troy', which character does leading actor Brad Pitt play?
-            <img src='img/troy.jfif'>
-            <select name='ans10'>
-                <option value='blank'></option>
-                <option value='Troy'>Troy</option>
-                <option value='King Priam'>King Priam</option>
-                <option value='Achillies'>Achillies</option>
-                <option value='Hector'>Hector</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 11:</h3>
-            <h2>In the movie 'White Chicks' starring Keenan & Marlon Wayans, the Head of Police is referd to as a 
-            <select name='ans11'>
-                <option value='blank'></option>
-                <option value='Beautiful Coffee Man'>Beautiful Coffe Man</option>
-                <option value='Beautiful Handsome Man'>Beautiful Handsome Man</option>
-                <option value='Beautiful Chocolate Man'>Beautiful Chocolate Man</option>
-                <option value='Beautiful Sexy Man'>Beautiful Sexy Man</option>
-            </select>
-             by the fake Tiffany Wilson? 
-             <img src='img/white.jfif'>
-            </h2><br>",
-            "<h3>Question 12:</h3>
-            <h2>In the 'Bad Boys' movie series, which nickname is given to Martin Lawrence(pretending to be Mike Lowrey) during the stakeout scene? (1995)
-            <img src='img/badboys.jfif'>
-            <select name='ans12'>
-                <option value='blank'></option>
-                <option value='Big Mike'>Big Mike</option>
-                <option value='Mikey'>Mikey</option>
-                <option value='King Ding-a-ling'>King Ding-a-ling</option>
-                <option value='Officer Mike'>Officer Mike</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 13:</h3>
-            <h2>According to comedian Aries Spears, rapper/actor LL Cool J likes to rub 
-            <select name='ans13'>
-                <option value='blank'></option>
-                <option value='Cream'>Cream</option>
-                <option value='Chocolate'>Chocolate</option>
-                <option value='Guava oil'>Guava oil</option>
-                <option value='Butter'>Butter</option>
-            </select>
-            on his six-pack 😋
-            <img src='img/llcoolj.jfif'>
-            </h2><br>",
-            "<h3>Question 14:</h3>
-            <h2>Who is the most on-screen portrayed actor of all time ?
-            <select name='ans14'>
-                <option value='blank'></option>
-                <option value='Charlie Chaplin'>Charlie Chaplin</option>
-                <option value='Elvis Presley'>Elvis Presley</option>
-                <option value='Michael Jackson'>Michael Jackson</option>
-                <option value='Samuel L Jackson'>Samuel L Jackson</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 15:</h3>
-            <h2>What is the name of the demon in the 2018 horror 'The Nun'?
-            <img src='img/valek.jfif'>
-            <select name='ans15'>
-                <option value='blank'></option>
-                <option value='Vince McMahon'>Vince McMahon</option>
-                <option value='Valek'>Valek</option>
-                <option value='Voldemort'>Voldemort</option>
-                <option value='Vicky'>Vicky</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 16:</h3>
-            <h2>Which American female artist co-starred Mike Myers in an Austin Powers film.
-            <img src='img/austin.jfif'>
-            <select name='ans16'>
-                <option value='blank'></option>
-                <option value='Britney Spears'>Britney Spears</option>
-                <option value='Lady Gaga'>Lady Gaga</option>
-                <option value='Beyonce Knowles'>Beyonce Knowles</option>
-                <option value='Jennifer Lopez'>Jennifer Lopez</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 17:</h3>
-            <h2>In the 2018 Pixar movie 'The Incredibles 2', what is the name of the baby boy in the Incredible family?
-            <img src='img/incredibles.jfif'>
-            <select name='ans17'>
-                <option value='blank'></option>
-                <option value='Jim-Jim'>Jim-Jim</option>
-                <option value='Jon-Jon'>Jon-Jon</option>
-                <option value='Jack-Jack'>Jack-Jack</option>
-                <option value='Jake-Jake'>Jake-Jake</option>
-            </select>
-            </h2><br><br>",
-            "<h3>Question 18:</h3>
-            <h2>In the movie 'Facing The Giants' what is the team name of the Christian school who makes it to the finals?.
-            <img src='img/giants.jfif'>
-            <select name='ans18'>
-                <option value='blank'></option>
-                <option value='The Saints'>The Saints</option>
-                <option value='The Eagles'>Tthe Eagles</option>
-                <option value='The Church Boys'>The Church Boys</option>
-                <option value='The Giants'>The Giants</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 19:</h3>
-            <h2>What is the name of the toy cowboy in the Toy Story movie franchise?
-            <img src='img/toystory.jfif'>
-            <select name='ans19'>
-                <option value='blank'></option>
-                <option value='Ricardo'>Ricardo</option>
-                <option value='Buzz'>Buzz</option>
-                <option value='Mr Potatoe'>Mr Potatoe</option>
-                <option value='Woody'>Woody</option>
-            </select>
-            </h2><br>",
-            "<h3>Question 20:</h3>
-            <h2>In the first edition of the 'Saw' movie franchise (Saw 1), what happens to the first key in the opening scene?
-            <img src='img/saw2.jpg'>
-            <select name='ans20'>
-                <option value='blank'></option>
-                <option value='Swallowed by Jigsaw'>Swallowed by Jigsaw</option>
-                <option value='Burnt in the fire'>Burnt in the fire</option>
-                <option value='Falls down the drain'>Falls down the drain</option>
-                <option value='Jigsaw takes it back'>Jigsaw takes it back
-                </option>
-            </select>
-            </h2><br>",
+            $questions = array("",
+            "<div>
+                <h2>In The Jungle Book movie franchise, what is the name of the boy in the jungle?🦍<br>
+                <img src='img/jungle.jfif'>
+                <select name=ans1>
+                    <option value='blank'></option>
+                    <option value='Shere Kahn'>Shere Kahn</option>
+                    <option value='Shaka Kahn'>Shaka Kahn</option>
+                    <option value='Mowgli'>Mowgli</option>
+                    <option value='Tarzan'>Tarzan</option>
+                </select>
+                </h2><br>
+            </div>"
+            ,
+            "
+            <div>
+                <h2>In the 2013 movie 'The Wolf of Wall Street' Leonardo Di Caprio portrays which famous American stock broker?🥂 🍷 🥃 🍸 
+                <img src='https://i.gifer.com/vcw.gif'>
+                <select name=ans2>
+                    <option value='blank'></option>
+                    <option value='Jordan Belfort'>Jordan Belfort</option>
+                    <option value='Jordan Belmont'>Jordan Belmont</option>
+                    <option value='Jordan Smith'>Jordan Smith</option>
+                    <option value='Jordan Mitchell'>Jordan Mitchell</option>
+                </select></h2><br><br>
+            </div>",
+            "
+            <div>
+                <h2>Which quality does Terry Crews regard as attractve in the movie 'White Chicks'?
+                <img src='https://i.gifer.com/CLE9.gif'>
+                <select name=ans3>
+                    <option value='blank'></option>
+                    <option value='Big feet'>Big feet</option>
+                    <option value='A woman with a big appetite'>A woman with a big appetite</option>
+                    <option value='Blonde hair'>Blonde hair</option>
+                    <option value='Nice eyes'>Nice eyes</option>
+                </select>
+                </h2><br>
+            </div>",
+            "
+            <div>
+                <h2>In the Despicable Me movie franchise, the yellow minions can't resist which fruit?🍎 🍐 🍊 🍋 🍌
+                <img src='img/minions.jfif'>
+                <select name=ans4>
+                    <option value='blank'></option>
+                    <option value='Apples'>Apples</option>
+                    <option value='Strawberries'>Strawberries</option>
+                    <option value='Bananas'>Bananas</option>
+                    <option value='Oranges'>Oranges</option>
+                </select>
+                </h2><br>
+            </div>",
+            "
+            <div>
+                <h2>In the 'Scary Movie' comedy franchise, what is the name of the killer in the mask👻?
+                <img src='https://i.gifer.com/6QzE.gif'>
+                <select name='ans5'>
+                    <option value='blank'></option>
+                    <option value='Ghostface'>Ghostface</option>
+                    <option value='Scream'>Scream</option>
+                    <option value='Bobby-Ray'>Bobby-Ray</option>
+                    <option value='Slash'>Slash</option>
+                </select>
+                </h2><br>
+            </div>
+            <div></div><br>", 
+            "
+            <div>
+                <h2>Who does Samuel L Jackson play in the 2000 film 'Shaft'?
+                <img src='img/shaft.jfif'>
+                <select name='ans6'>
+                    <option value='blank'></option>
+                    <option value='Eddy Shaft'>Eddy Shaft</option>
+                    <option value='John Shaft'>John Shaft</option>
+                    <option value='Mike Shaft'>Mike Shaft</option>
+                    <option value='Wade Shaft'>Wade Shaft</option>
+                </select>
+                </h2><br>
+            </div>"
+            ,
+            "
+            <div>
+                <h2>Who directed the 2007 film 'Transformers'?
+                <img src='img/transformers.jfif'>
+                <select name='ans7'>
+                    <option value='blank'></option>
+                    <option value='Steven Richards'>Steven Richards</option>
+                    <option value='Steven Spielberg'>Steven Spielberg</option>
+                    <option value='Martin Scorsese'>Martin Scorsese</option>
+                    <option value='Michael Bay'>Michael Bay</option>
+                </select>
+                </h2><br>
+            </div>",
+            "
+            <div>
+                <h2>In the 1998 film 'Armaggedon', which natural disaster do humans face?
+                <img src='img/armageddon.jfif'>
+                <select name='ans8'>
+                    <option value='blank'></option>
+                    <option value='Asteroid Impact'>Asteroid Impact</option>
+                    <option value='Massive Earthquake'>Massive Earthquake</option>
+                    <option value='Massive Tsunami'>Massive Tsunami</option>
+                    <option value='Massive Volcanic Erruption'>Massive Volcanic Erruption</option>
+                </select>
+                </h2><br>
+            </div>"
+            ,
+            "
+            <div>
+                <h2>Which movie does the term 'Say hello to my little friend' come from?
+                <img src='https://media.giphy.com/media/mmSNtSemWJJGE/giphy.gif'>
+                <select name='ans9'>
+                    <option value='blank'></option>
+                    <option value='Rambo'>Rambo</option>
+                    <option value='The Terminator'>The Terminator</option>
+                    <option value='Scarface'>Scarface</option>
+                    <option value='Bad Boys 2'>Bad Boys 2</option>
+                </select>
+                </h2><br>
+            </div>"
+            ,
+            "
+            <div>
+                <h2>In the greek mythology movie 'Troy', which character does leading actor Brad Pitt play?
+                <img src='img/troy.jfif'>
+                <select name='ans10'>
+                    <option value='blank'></option>
+                    <option value='Troy'>Troy</option>
+                    <option value='King Priam'>King Priam</option>
+                    <option value='Achillies'>Achillies</option>
+                    <option value='Hector'>Hector</option>
+                </select>
+                </h2><br>
+            </div>"
+            ,
+            "
+            <div>
+                <h2>In the movie 'White Chicks' starring Keenan & Marlon Wayans, the Head of Police is referd to as a 
+                <select name='ans11'>
+                    <option value='blank'></option>
+                    <option value='Beautiful Coffee Man'>Beautiful Coffe Man</option>
+                    <option value='Beautiful Handsome Man'>Beautiful Handsome Man</option>
+                    <option value='Beautiful Chocolate Man'>Beautiful Chocolate Man</option>
+                    <option value='Beautiful Sexy Man'>Beautiful Sexy Man</option>
+                </select>
+                by the fake Tiffany Wilson? 
+                <img src='img/white.jfif'>
+                </h2><br>
+            </div>",
+            "
+            <div>
+                <h2>In the 'Bad Boys' movie series, which nickname is given to Martin Lawrence(pretending to be Mike Lowrey) during the stakeout scene? (1995)
+                <img src='img/badboys.jfif'>
+                <select name='ans12'>
+                    <option value='blank'></option>
+                    <option value='Big Mike'>Big Mike</option>
+                    <option value='Mikey'>Mikey</option>
+                    <option value='King Ding-a-ling'>King Ding-a-ling</option>
+                    <option value='Officer Mike'>Officer Mike</option>
+                </select>
+                </h2><br>
+            </div> <br>",
+            "
+            <div>
+                <h2>According to comedian Aries Spears, rapper/actor LL Cool J likes to rub 
+                <select name='ans13'>
+                    <option value='blank'></option>
+                    <option value='Cream'>Cream</option>
+                    <option value='Chocolate'>Chocolate</option>
+                    <option value='Guava oil'>Guava oil</option>
+                    <option value='Butter'>Butter</option>
+                </select>
+                on his six-pack 😋
+                <img src='img/llcoolj.jfif'>
+                </h2><br>
+            </div>",
+            "
+            <div>
+                <h2>Who is the most on-screen portrayed actor of all time ?
+                <select name='ans14'>
+                    <option value='blank'></option>
+                    <option value='Charlie Chaplin'>Charlie Chaplin</option>
+                    <option value='Elvis Presley'>Elvis Presley</option>
+                    <option value='Michael Jackson'>Michael Jackson</option>
+                    <option value='Samuel L Jackson'>Samuel L Jackson</option>
+                </select>
+                </h2><br>
+            </div>",
+            "
+            <div>
+                <h2>What is the name of the demon in the 2018 horror 'The Nun'?
+                <img src='img/valek.jfif'>
+                <select name='ans15'>
+                    <option value='blank'></option>
+                    <option value='Vince McMahon'>Vince McMahon</option>
+                    <option value='Valek'>Valek</option>
+                    <option value='Voldemort'>Voldemort</option>
+                    <option value='Vicky'>Vicky</option>
+                </select>
+                </h2><br><br>
+            </div><br>",
+            "<br>
+            <div>
+                <h2>Which American female artist co-starred Mike Myers in an Austin Powers film.
+                <img src='https://i.gifer.com/Xg5B.gif'>
+                <select name='ans16'>
+                    <option value='blank'></option>
+                    <option value='Britney Spears'>Britney Spears</option>
+                    <option value='Lady Gaga'>Lady Gaga</option>
+                    <option value='Beyonce Knowles'>Beyonce Knowles</option>
+                    <option value='Jennifer Lopez'>Jennifer Lopez</option>
+                </select>
+                </h2><br>
+            </div>",
+            "
+            <div>
+                <h2>In the 2018 Pixar movie 'The Incredibles 2', what is the name of the baby boy in the Incredible family?
+                <img src='img/incredibles.jfif'>
+                <select name='ans17'>
+                    <option value='blank'></option>
+                    <option value='Jim-Jim'>Jim-Jim</option>
+                    <option value='Jon-Jon'>Jon-Jon</option>
+                    <option value='Jack-Jack'>Jack-Jack</option>
+                    <option value='Jake-Jake'>Jake-Jake</option>
+                </select>
+                </h2><br><br>
+            </div><br>",
+            "<br>
+            <div>
+                <h2>In the movie 'Facing The Giants' what is the team name of the Christian school who makes it to the finals?.
+                <img src='img/giants.jfif'>
+                <select name='ans18'>
+                    <option value='blank'></option>
+                    <option value='The Saints'>The Saints</option>
+                    <option value='The Eagles'>The Eagles</option>
+                    <option value='The Church Boys'>The Church Boys</option>
+                    <option value='The Giants'>The Giants</option>
+                </select>
+                </h2><br>
+            </div><br>",
+            "
+            <div>
+                <h2>What is the name of the toy cowboy in the Toy Story movie franchise?
+                <img src='img/toystory.jfif'>
+                <select name='ans19'>
+                    <option value='blank'></option>
+                    <option value='Ricardo'>Ricardo</option>
+                    <option value='Buzz'>Buzz</option>
+                    <option value='Mr Potatoe'>Mr Potatoe</option>
+                    <option value='Woody'>Woody</option>
+                </select>
+                </h2><br>
+            </div>",
+            "
+            <div>
+                <h2>In the first edition of the 'Saw' movie franchise (Saw 1), what happens to the first key in the opening scene?
+                <img src='img/saw2.jpg'>
+                <select name='ans20'>
+                    <option value='blank'></option>
+                    <option value='Swallowed by Jigsaw'>Swallowed by Jigsaw</option>
+                    <option value='Burnt in the fire'>Burnt in the fire</option>
+                    <option value='Falls down the drain'>Falls down the drain</option>
+                    <option value='Jigsaw takes it back'>Jigsaw takes it back
+                    </option>
+                </select>
+                </h2><br>
+            </div>",
             '<br><br>
             <div class="text">
                 <span>Click</span>
