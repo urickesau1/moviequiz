@@ -1,5 +1,6 @@
 # moviequiz
 My first project using php. This is a simple questionnaire I created.
+You can access the questionnaire on my github account here: https://urickesau1.github.io/moviequiz/
   
 
 <div class="navbar">
