@@ -322,7 +322,7 @@
                 }
                 elseif ($correct == 19) {
                     echo "<p>Nogal 19, Amper Milo mybru!!!</p>
-                    <img src='https://media.giphy.com/media/l0MYCn3DDRBBqk6nS/giphy.gif'>";
+                    <img src='https://media.giphy.com/media/fxsqOYnIMEefC/giphy.gif'>";
                 }
                 elseif ($correct == 20) {
                     echo "<p>You did it! Af met die boom mybru!
