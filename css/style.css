@@ -1,0 +1,35 @@
+.navbar {
+    color: white;
+  }
+  
+.navbar ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.navbar ul li {
+    float: left;
+    width: 470px;
+    height: 65px;
+    background-color: transparent;
+    opacity: .8;
+    line-height: 40px;
+    text-align: center;
+
+
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: yellow;
+    display: block;
+}
+
+.navbar ul li ul li {
+    display: none;
+}
+
+.navbar ul li:hover ul li {
+    display: block;
+}
