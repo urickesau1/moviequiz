@@ -67,7 +67,7 @@
 <body>
     <form action="index.php" method="post">
         <?php
-          
+          //This is the function I used to store the user's name input, to be displayed on the next page.
           session_start();    
           if(isset($_POST['username'])) { 
              $_SESSION['username'] = $_POST['username'];
@@ -76,7 +76,7 @@
 
 
 
-        <h2>So 
+        <h2>So <!--The form which allows a user to enter their name -->
             <form action="index.php" method="post" name="username">
                 <input type="text" placeholder="Your name" name="username">
                
@@ -85,13 +85,16 @@
                 you like movies? Have a good eye for detail? Lets find out just how much you know about movie trivia.
                 <p>Click Submit and then Begin quiz.</p>
                 <img src='img/saw1.jpg'>
+                <!--A simple effect which might entice the user to begin the quiz-->
                 <div class="text">
                     <span>ARE</span>
                     <span>YOU</span>
                     <span>READY?</span>
                     <div style="clear: both"></div>
                 </div> <br>
+                <!--This is the submit button which upon clicking will store the users input above -->               
                 <input type="submit" > <br><br>
+                <!--This is the link to the home.php page which contains the actual quiz -->
                 <a href="home.php">Begin quiz</a>
             </form>         
                 
