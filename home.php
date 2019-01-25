@@ -622,7 +622,7 @@
                 <span>Results</span>
                 <div style="clear: both"></div>
             </div>
-            <input type="submit">;');
+            <input type="submit" value="Submit">;');
 
             //This is the function I used to loop through the questions and options within the variable and display them on the webpage
             for ($x=1;$x<=21;$x++) { 
