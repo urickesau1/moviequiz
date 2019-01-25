@@ -117,7 +117,7 @@
                 
                 <!--This is the link to the home.php page which contains the actual quiz -->
                 
-                <input type="submit" > <br><br>
+                <input type="submit" value="Submit" action="home.php"> <br><br>
                 <a href="home.php">Begin quiz</a><br>
                 <img src='img/saw1.jpg'>
             </form>         
